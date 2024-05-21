@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 15vw;
-    margin-top: -6rem;
+    margin-top: -5.5rem;
     transition: align-items 200ms ease-out;
 }
 
@@ -55,15 +55,6 @@ body {
     align-items: flex-start;
     padding: 1.5rem 15vw;
     margin-top: -5rem; /* Adjust this value if needed to control spacing */
-}
-
-.proj2 {
-    font-family: "apercu bold";
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1.5rem 15vw;
-    margin-top: -6.5rem; /* Adjust this value if needed to control spacing */
 }
 
 .link{
