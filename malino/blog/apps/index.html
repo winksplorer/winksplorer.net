@@ -14,19 +14,13 @@
 
         <h3 class="head code">This is not implemented yet.</h3>
 
-        <h4 class="head"><br>In most Cosmos operating systems, the choices for implementing & running applications are not that good.
-            You practically have the options of either baking all the applications inside your OS, or to create and parse a scripting language.</h4>
+        <h4 class="head"><br>In most Cosmos operating systems, the choices for implementing & running applications are not that good. You practically have the option of either baking all the applications inside your OS or creating and parsing a scripting language.</h4>
         
-        <h4 class="head"><br>While Cosmos has got some good options for scripting now, like Lua, You still cannot make compiled applications run, and most importantly, 
-            almost every OS made with Cosmos has their apps incompatible with each other. So almost nobody actually makes apps for Cosmos OSes, the most that people
-            are willing to do for Cosmos is to basically create libraries disguised as apps with an entry point that the OS calls, and even these need to be put
-            inside the OS at compile time, not at runtime.</h4>
+        <h4 class="head"><br>While Cosmos has some good options for scripting now, like Lua, You still cannot make compiled applications run, and most importantly, almost every OS made with Cosmos has their apps incompatible with each other. So almost nobody makes apps for Cosmos OSes, the most that people are willing to do for Cosmos is to create libraries disguised as apps with an entry point that the OS calls. And even these need to be put inside the OS at compile time, not at runtime.</h4>
         
-        <h4 class="head"><br>Since malino uses the Linux kernel, which has very good ELF loading and execution, we have the flexibility to have compiled apps load at runtime.
-            We can also guarantee that if your app runs on one malino OS, it will most likely run on all of them.</h4>
+        <h4 class="head"><br>Since malino uses the Linux kernel, which has very good ELF loading and execution, we have the flexibility to have compiled apps load at runtime. And we can guarantee that if your app runs on one malino OS, it will most likely run on all of them.</h4>
         
-        <h4 class="head"><br>While you could get apps at runtime (We'll discuss that later), you could also include files & apps in your OS. This is equivalent to
-            embedded resources in Cosmos, but these will be embedded as files in your OS's file system, not included in the binary of your OS.</h4>
+        <h4 class="head"><br>While you could get apps at runtime (We'll discuss that later), you could also include files & apps in your OS. This is equivalent to embedded resources in Cosmos, but these will be embedded as files in your OS's file system, not included in the binary of your OS.</h4>
         
         <h4 class="head code"><span class="comm"># testProject/malino.cfg<br><br>
             # include &lt;file path (starting with https:// will download a file)&gt; &lt;location in the malino system&gt;<br>
@@ -36,8 +30,8 @@
             include https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-amd64 /bin/jq
         </h4>
 
-        <h4 class="head"><br>Loading apps at runtime can simply be done by recieving an app by some means at runtime, and running it with a libmalino function call.</h4>
+        <h4 class="head"><br>Loading apps at runtime can simply be done by receiving an app by some means at runtime, and running it with a libmalino function call.</h4>
     
-        <h4 class="head"><br>One of the ways you could recieve an app is from a universal package API that malino could use, but we're not sure of this yet.</h4>
+        <h4 class="head"><br>One of the ways you could receive an app is from a universal package API that malino could use. But we're not sure of this yet.</h4>
     </body>
 </html>
