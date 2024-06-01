@@ -124,6 +124,7 @@ body {
     margin-left:15vw;
     max-width: calc(100vw - calc(30vw + 0.5rem)); /* Calculate max-width accordingly */
     width: 100%; /* Ensure the div's width is responsive */
+    margin-bottom: 6rem;
 }
 
 .comm {
