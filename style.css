@@ -23,7 +23,7 @@ body {
     font-smooth: always;
 }
 
-.h {  margin-top:-5.5vh; }
+.h {  margin-top:-5.5vh; font-size: 3rem; }
 .logo { margin-top:12vh; font-family: 'ApercuMedium' }
 #b { 
     list-style:none;
