@@ -64,3 +64,41 @@ p {
     margin-top:0em;
     font-size: 0.8em;
 }
+
+code {
+    margin-top: 0.3em;
+    font-size: 0.5em;
+}
+
+button, input { font-family: 'ApercuRegular'; }
+
+label, input { font-size: 0.5em; }
+
+button {
+    width: fit-content;
+    font-size: 0.8em;
+    background: white;
+    border: 0;
+    border-radius: 1px;
+    padding: 0.1em 0.3em;
+    transition: background-color 0.1s ease;
+}
+
+button:hover {
+    background: #ccc;
+}
+
+button:active {
+    background: #777;
+}
+
+button[disabled] {
+    background: #777;
+    color: #aaa;
+}
+
+.ai-c {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}

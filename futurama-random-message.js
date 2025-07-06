@@ -20,10 +20,6 @@ const msgs = [
     "Placing 4-figure bets on the winner of the Debian Art Contest since 2020"
 ];
 
-function futuramaRandomMessage() {
-    const i = Math.floor(Math.random() * msgs.length);
-    document.getElementById("futurama-random-message").textContent = msgs[i];
-}
-
-// Call the function on page load
-window.onload = futuramaRandomMessage;
+window.onload = () => 
+    document.getElementById("futurama-random-message").textContent
+    = msgs[Math.floor(Math.random() * msgs.length)];

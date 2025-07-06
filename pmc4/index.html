@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>pmc4</title>
+        <link href="../style.css" rel="stylesheet" type="text/css">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta charset="UTF-8">
+	    <meta name="description" content="An awful Markov chain text generator 'trained' on 68 Wikipedia articles">
+
+        <script src="msgpack.min.js" defer></script>
+        <script src="markov.js" defer></script>
+    </head>
+    <body>
+        <h1 class="logo">pmc4</h1>
+        <h3 class="h">pre-trained markov chain (n=4)</h3>
+
+        <p>a horrifically bad "language model" that's really just a markov chain "trained" on 68 wikipedia articles. it runs completely in the browser.</p>
+
+        <div class="ai-c">
+            <button id="runBtn" onclick="runPmc4()" disabled>run pmc4</button>
+            
+            <label for="tokens">length-ish:</label>
+            <input id="tokens" type="number" min="0" max="999" step="5" value="128">
+        </div>
+        <code id="result">-result will go here-</code>
+    </body>
+</html>
