@@ -68,6 +68,12 @@ const msgs = {
     'ai': [
         'AI is used', 'Vibe coding is',
         'Major venture capital', 'OpenAI is an'
+    ],
+    'osdev-geopolitics': [
+        'See Memory Map', 'A variety of',
+        'The idea behind', 'First of all',
+        'ELF is a', 'At the time',
+        'To access a', 'Programmers often think'
     ]
 };
 
@@ -77,7 +83,7 @@ let selectedModel = '';
 
 // listen for model change
 document.getElementById('model').addEventListener('change', function (e) {
-    if (!e.target.value || (e.target.value !== 'base' && e.target.value !== 'ai')) return;
+    if (!e.target.value || !Object.keys(msgs).includes(e.target.value)) return;
 
     // disable the run button
     document.getElementById('runBtn').setAttribute('disabled', '');
