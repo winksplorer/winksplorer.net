@@ -2,26 +2,41 @@
 <html lang="en">
     <head>
         <title>pmc4</title>
-        <link href="../style.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta charset="UTF-8">
 	    <meta name="description" content="An awful Markov chain text generator 'trained' on 68 Wikipedia articles">
+
+        <link href="../style.css" rel="stylesheet" type="text/css">
 
         <script src="msgpack.min.js" defer></script>
         <script src="markov.js" defer></script>
     </head>
     <body>
-        <h1 class="logo">pmc4</h1>
-        <h3 class="h">pre-trained markov chain (n=4)</h3>
+        <section class="colored">
+            <div class="content">
+                <h1>pmc4</h1>
 
-        <p>a horrifically bad "language model" that's really just a markov chain "trained" on 68 wikipedia articles. it runs completely in the browser.</p>
+                <h3 class="lower-mt">pre-trained markov chain (n=4)</h3>
 
-        <div class="ai-c">
-            <button id="runBtn" onclick="runPmc4()" disabled>run pmc4</button>
-            
-            <label for="tokens">length-ish:</label>
-            <input id="tokens" type="number" min="0" max="999" step="5" value="128">
-        </div>
-        <code id="result">-result will go here-</code>
+                <p>A horrifically bad "language model" that's really just a Markov chain "trained" on 68 Wikipedia articles. It runs completely in the browser. <a href="../index.html">Click here to go home.</a></p>
+
+                <div class="inline">
+                    <button id="runBtn" onclick="runPmc4()" disabled>Run pmc4</button>
+                    
+                    <label for="tokens">length-ish:</label>
+                    <input id="tokens" type="number" min="0" max="999" step="5" value="128">
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="content">
+                <code id="result">-result will go here-</code>
+            </div>
+        </section>
+
+        <footer class="short">&copy; 2025 winksplorer et al. All <a href="https://github.com/winksplorer/winksplorer.net">code and content</a> is licensed under the Apache License 2.0 unless stated otherwise.
+            <br><br>The font used for headers on this site is the <a href="https://fontstruct.com/fontstructions/show/584688">"TI Calculator Font"</a> by SimonOrJ, and is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0">CC BY-NC-SA 3.0</a>. No modifications were made.</footer>
     </body>
 </html>

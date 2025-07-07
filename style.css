@@ -1,104 +1,152 @@
+/* fonts */
 @font-face {
-	font-family: 'ApercuMedium';
-    src: url("apercu-medium.woff2") format("woff2");
-    font-weight: normal;
+    font-family: 'Barlow Condensed';
+    src: url('assets/BarlowCondensed-Regular.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'ApercuRegular';
-    src: url("apercu-regular.woff2") format("woff2");
-    font-weight: 200;
+    font-family: 'TI';
+    src: url('assets/ti-calculator-font.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Terminus';
+    src: url('assets/TerminusTTF-4.49.3.woff2') format('woff2');
+}
+
+/* whole page */
+
+html, body {
+    background: black;
+    color: white;
+
+    margin:0;
+}
+
+* {
+    font-family: 'Barlow Condensed', 'Helvetica Neue Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-stretch: condensed;
 }
 
 body {
-    background:black;
-    margin-left:15vw;
-    margin-right:15vw;
-    color:white;
-    font-family: 'ApercuRegular';
-    font-size: 4.5vh;
-    display: flex;
-    flex-direction: column;
-    font-weight: 100;
-    font-smooth: always;
+    font-size: 1.4em;
+    line-height: 1.4;
 }
 
-.h {  margin-top:-5.5vh; font-size: 4vh; }
-.logo { margin-top:12vh; font-family: 'ApercuMedium' }
-#b { 
-    list-style:none;
-    flex:1;
-    margin-top:-2vh;
-}
+/* generic elements */
 
 a {
-    color: white;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
-    font-size: 1.17em;
-    margin-bottom:0.5vh;
-    font-weight: bold;
-    font-family: 'ApercuMedium';
+    color: #4db6ac;
 }
 
-a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.2s ease-out;
-}
-
-a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-p {
-    margin-top:0em;
-    font-size: 0.8em;
+li {
+    margin-top: 0.2em;
 }
 
 code {
-    margin-top: 0.3em;
-    font-size: 0.5em;
+    font-family: 'Terminus', 'Menlo', 'Courier New', Courier, monospace;
 }
 
-button, input { font-family: 'ApercuRegular'; }
-
-label, input { font-size: 0.5em; }
+input {
+    font-size: 0.8em;
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+}
 
 button {
-    width: fit-content;
-    font-size: 0.8em;
-    background: white;
-    border: 0;
-    border-radius: 1px;
-    padding: 0.1em 0.3em;
-    transition: background-color 0.1s ease;
+    height: 1.5em;
+    min-width: 4.5em;
+
+    font-size: 1em;
+    line-height: 1;
+
+    border: none;
+    border-radius: 2px;
+
+    background: #80cbc4;
+
+    transition: background 0.2s ease;
 }
 
 button:hover {
-    background: #ccc;
+    background: #71b3ac;
 }
 
 button:active {
-    background: #777;
+    background: #47857e;
 }
 
 button[disabled] {
-    background: #777;
-    color: #aaa;
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.30);
 }
 
-.ai-c {
+/* headers */
+h1, h2, h3 {
+    font-family: 'TI', 'Terminus', 'Menlo', 'Courier New', Courier, monospace;
+    font-weight: normal;
+    line-height: 1.2;
+
+    margin-bottom: 0;
+
+    transition: font-size 0.1s ease;
+}
+
+h1 {
+    font-size: 2em;
+    font-size: clamp(1em, 2vw + 1em, 2em);
+}
+
+h2 {
+    font-size: 1.4em;
+    font-size: clamp(1em, 2vw + 1em, 1.4em);
+}
+
+h3 {
+    font-size: 1.2em;
+    font-size: clamp(1em, 2vw + 1em, 1.2em);
+}
+
+/* sections */
+
+section {
+    padding: 30px 0;
+}
+
+section.colored {
+    background: #004d40;
+}
+
+section.colored a {
+    color: #80cbc4;
+}
+
+.content, footer {
+    margin: 0 auto;
+    max-width: 650px;
+    max-width: clamp(200px, 80vw, 650px);
+
+    transition: max-width 0.2s ease;
+}
+
+footer {
+    margin-top: 6em;
+    margin-bottom: 2em;
+}
+
+footer.short {
+    margin-top: 3em;
+}
+
+/* misc */
+
+.inline {
     display: flex;
     align-items: center;
-    gap: 12px
+    gap: 8px;
+}
+
+.lower-mt {
+    margin-top: 0.3em;
 }
