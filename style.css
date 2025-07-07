@@ -47,7 +47,7 @@ code {
     font-family: 'Terminus', 'Menlo', 'Courier New', Courier, monospace;
 }
 
-input {
+input, select {
     font-size: 0.8em;
     border: none;
     border-radius: 2px;

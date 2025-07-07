@@ -18,13 +18,28 @@
 
                 <h3 class="lower-mt">pre-trained markov chain (n=4)</h3>
 
-                <p>A horrifically bad "language model" that's really just a Markov chain "trained" on 68 Wikipedia articles. It runs completely in the browser. <a href="../index.html">Click here to go home.</a></p>
+                <p>A horrifically bad "language model" that's really just a Markov chain "trained" on Wikipedia articles. It runs completely in the browser. <a href="../index.html">Click here to go home.</a></p>
+
+                <p>You have a few options for models:</p>
+
+                <ul>
+                    <li>base: Trained off of 68 Wikipedia articles. It's pretty broad, but it's mostly software, geopolitics, and (some) memes.</li>
+                    <li>ai: 53 Wikipedia articles, <b>ALL</b> about AI in some form, form a majority of the model.
+                        It also includes over 700 slogans from AI startups on Y Combinator.</li>
+                </ul>
 
                 <div class="inline">
                     <button id="runBtn" onclick="runPmc4()" disabled>Run pmc4</button>
                     
                     <label for="tokens">length-ish:</label>
                     <input id="tokens" type="number" min="0" max="999" step="5" value="128">
+
+                    <label for="model">model:</label>
+                    <select id="model" required>
+                        <option value="" disabled selected>Select a model</option>
+                        <option value="base">base</option>
+                        <option value="ai">ai</option>
+                    </select>
                 </div>
 
             </div>
