@@ -57,6 +57,17 @@ function runMarkovModel(ngrams, n, maxWords = 50, start = null) {
     return unTokenize(output);
 }
 
+function runPmc4() {
+    const result = runMarkovModel(
+        ngrams, // markov chain
+        n, // "context"
+        document.getElementById('tokens').value, // how many tokens to generate
+        msgs[selectedModel][Math.floor(Math.random() * msgs[selectedModel].length)]); // starting tokens (must be n-1 tokens)
+    
+    // set result
+    document.getElementById('result').textContent = result;
+}
+
 // starting tokens
 const msgs = {
     'base': [
@@ -76,6 +87,8 @@ const msgs = {
         'To access a', 'Programmers often think'
     ]
 };
+
+const params = new URLSearchParams(window.location.search);
 
 let n = 0;
 let ngrams = {};
@@ -97,6 +110,13 @@ document.getElementById('model').addEventListener('change', function (e) {
             ngrams = data['ngrams'];
             selectedModel = e.target.value
 
+            // set url param
+            params.set('model', selectedModel);
+            window.history.pushState({}, '', `${window.location.pathname}?${params.toString()}`);
+
+            // set page title
+            document.title = `pmc4 (${selectedModel})`
+
             // enable the run button
             document.getElementById('runBtn').removeAttribute('disabled');
         })
@@ -106,13 +126,13 @@ document.getElementById('model').addEventListener('change', function (e) {
         });
 });
 
-function runPmc4() {
-    const result = runMarkovModel(
-        ngrams, // markov chain
-        n, // "context"
-        document.getElementById('tokens').value, // how many tokens to generate
-        msgs[selectedModel][Math.floor(Math.random() * msgs[selectedModel].length)]); // starting tokens (must be n-1 tokens)
-    
-    // set result
-    document.getElementById('result').textContent = result;
+// auto set model based on param
+const value = params.get('model');
+
+if (value) {
+    const select = document.getElementById('model');
+    if ([...select.options].some(o => o.value === value)) {
+        select.value = value;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+    }
 }
