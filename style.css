@@ -40,21 +40,47 @@ a {
     color: #4db6ac;
 }
 
+li {
+    margin-top: 0.2em;
+}
+
 /* sections */
 
 section {
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 section.colored {
     background: #004d40;
 }
 
+section.colored a {
+    color: #80cbc4;
+}
+
 .content, footer {
     margin: 0 auto;
     max-width: 650px;
+    max-width: clamp(200px, 80vw, 650px);
+
+    transition: max-width 0.2s ease;
 }
 
 footer {
     margin-top: 6em;
+    margin-bottom: 2em;
+}
+
+footer.short {
+    margin-top: 3em;
+}
+
+/* misc shit */
+
+.giant {
+    font-size: 2em;
+    font-size: clamp(1em, 2vw + 1em, 2em);
+    margin-bottom: 0;
+
+    transition: font-size 0.2s ease;
 }
