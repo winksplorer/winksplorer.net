@@ -1,3 +1,5 @@
 # winksplorer.net
 
-bad website that sucks
+My website. Live at https://winksplorer.net.
+
+Uses vanilla HTML+CSS+JS.
