@@ -1,0 +1,29 @@
+/* fonts */
+@font-face {
+    font-family: 'Helvetica Neue Condensed';
+    src: url('assets/HelveticaNeue-Condensed.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'TI';
+    src: url('assets/ti-calculator-font.woff2') format('woff2');
+}
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+
+    font-family: 'Helvetica Neue Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-stretch: condensed;
+    font-size: 1.3em;
+    line-height: 1.4;
+
+    background: black;
+    color: white;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'TI';
+    font-weight: normal;
+    line-height: 1.2;
+}
