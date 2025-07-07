@@ -1,10 +1,5 @@
 /* fonts */
 @font-face {
-    font-family: 'Helvetica Neue Condensed';
-    src: url('assets/HelveticaNeue-Condensed.woff2') format('woff2');
-}
-
-@font-face {
     font-family: 'Barlow Condensed';
     src: url('assets/BarlowCondensed-Regular.woff2') format('woff2');
 }
@@ -14,7 +9,12 @@
     src: url('assets/ti-calculator-font.woff2') format('woff2');
 }
 
-/* generic elements */
+@font-face {
+    font-family: 'Terminus';
+    src: url('assets/TerminusTTF-4.49.3.woff2') format('woff2');
+}
+
+/* whole page */
 
 html, body {
     background: black;
@@ -23,18 +23,17 @@ html, body {
     margin:0;
 }
 
-body {
+* {
     font-family: 'Barlow Condensed', 'Helvetica Neue Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-stretch: condensed;
+}
+
+body {
     font-size: 1.4em;
     line-height: 1.4;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'TI', 'Menlo', 'Courier New', Courier, monospace;
-    font-weight: normal;
-    line-height: 1.2;
-}
+/* generic elements */
 
 a {
     color: #4db6ac;
@@ -42,6 +41,71 @@ a {
 
 li {
     margin-top: 0.2em;
+}
+
+code {
+    font-family: 'Terminus', 'Menlo', 'Courier New', Courier, monospace;
+}
+
+input {
+    font-size: 0.8em;
+    border: none;
+    border-radius: 2px;
+    padding: 2px;
+}
+
+button {
+    height: 1.5em;
+    min-width: 4.5em;
+
+    font-size: 1em;
+    line-height: 1;
+
+    border: none;
+    border-radius: 2px;
+
+    background: #80cbc4;
+
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #71b3ac;
+}
+
+button:active {
+    background: #47857e;
+}
+
+button[disabled] {
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.30);
+}
+
+/* headers */
+h1, h2, h3 {
+    font-family: 'TI', 'Terminus', 'Menlo', 'Courier New', Courier, monospace;
+    font-weight: normal;
+    line-height: 1.2;
+
+    margin-bottom: 0;
+
+    transition: font-size 0.1s ease;
+}
+
+h1 {
+    font-size: 2em;
+    font-size: clamp(1em, 2vw + 1em, 2em);
+}
+
+h2 {
+    font-size: 1.4em;
+    font-size: clamp(1em, 2vw + 1em, 1.4em);
+}
+
+h3 {
+    font-size: 1.2em;
+    font-size: clamp(1em, 2vw + 1em, 1.2em);
 }
 
 /* sections */
@@ -75,12 +139,14 @@ footer.short {
     margin-top: 3em;
 }
 
-/* misc shit */
+/* misc */
 
-.giant {
-    font-size: 2em;
-    font-size: clamp(1em, 2vw + 1em, 2em);
-    margin-bottom: 0;
+.inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-    transition: font-size 0.2s ease;
+.lower-mt {
+    margin-top: 0.3em;
 }
