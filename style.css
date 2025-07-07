@@ -5,25 +5,56 @@
 }
 
 @font-face {
+    font-family: 'Barlow Condensed';
+    src: url('assets/BarlowCondensed-Regular.woff2') format('woff2');
+}
+
+@font-face {
     font-family: 'TI';
     src: url('assets/ti-calculator-font.woff2') format('woff2');
 }
 
-body {
-    margin: 40px auto;
-    max-width: 650px;
+/* generic elements */
 
-    font-family: 'Helvetica Neue Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-stretch: condensed;
-    font-size: 1.3em;
-    line-height: 1.4;
-
+html, body {
     background: black;
     color: white;
+
+    margin:0;
+}
+
+body {
+    font-family: 'Barlow Condensed', 'Helvetica Neue Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-stretch: condensed;
+    font-size: 1.4em;
+    line-height: 1.4;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'TI';
+    font-family: 'TI', 'Menlo', 'Courier New', Courier, monospace;
     font-weight: normal;
     line-height: 1.2;
+}
+
+a {
+    color: #4db6ac;
+}
+
+/* sections */
+
+section {
+    padding: 40px 0;
+}
+
+section.colored {
+    background: #004d40;
+}
+
+.content, footer {
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+footer {
+    margin-top: 6em;
 }
