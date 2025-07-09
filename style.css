@@ -26,11 +26,27 @@ html, body {
 * {
     font-family: 'Barlow Condensed', 'Helvetica Neue Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-stretch: condensed;
+
+    scrollbar-width: thin;
+    scrollbar-color: #80cbc4 #004d40;
 }
 
 body {
     font-size: 1.4em;
     line-height: 1.4;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #004d40;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #80cbc4;
+    border-radius: 1px;
 }
 
 /* generic elements */
@@ -52,6 +68,17 @@ input, select {
     border: none;
     border-radius: 2px;
     padding: 2px;
+}
+
+input[type="color"] {
+    width: 30px;
+    height: 24px;
+    padding: 0px 2px;
+}
+
+canvas {
+    image-rendering: pixelated;
+    border: 1px solid #fff;
 }
 
 
@@ -143,10 +170,14 @@ footer.short {
 
 /* misc */
 
-.inline {
+.inline, fieldset {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.inline + .inline {
+    margin-top: 12px;
 }
 
 .lower-mt {
