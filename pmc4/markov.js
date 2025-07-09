@@ -127,12 +127,12 @@ document.getElementById('model').addEventListener('change', function (e) {
 });
 
 // auto set model based on param
-const value = params.get('model');
+const model = params.get('model');
 
-if (value) {
+if (model) {
     const select = document.getElementById('model');
-    if ([...select.options].some(o => o.value === value)) {
-        select.value = value;
+    if ([...select.options].some(o => o.value === model)) {
+        select.value = model;
         select.dispatchEvent(new Event('change', { bubbles: true }));
     }
 }
