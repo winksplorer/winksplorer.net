@@ -70,7 +70,7 @@ function runPmc4() {
 
 // starting tokens
 const msgs = {
-    'base': [
+    'generic': [
         'Very early in', 'According to interviews',
         'Over the long', 'The effects of',
         'The creation of', 'At the time',
