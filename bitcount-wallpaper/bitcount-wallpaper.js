@@ -34,7 +34,9 @@ function generateWallpaper() {
     // set size
     canvas.width = inputs.width;
     canvas.height = inputs.height;
-    canvas.style.height = `${(inputs.height / inputs.width) * 650}px`
+
+    window.onresize = () => canvas.style.height = `${(inputs.height / inputs.width) * parseInt(getComputedStyle(canvas).width)}px`;
+    window.onresize();
 
     // clear
     ctx.fillStyle = inputs.zero;

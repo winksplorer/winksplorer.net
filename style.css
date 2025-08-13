@@ -79,6 +79,8 @@ input[type="color"] {
 canvas {
     image-rendering: pixelated;
     border: 1px solid #fff;
+    width: 650px;
+    width: clamp(200px, 80vw, 650px);
 }
 
 
@@ -174,6 +176,11 @@ footer.short {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 755px) {
+    .inline { display: inline-block; width: 100%; }
 }
 
 .inline + .inline {
