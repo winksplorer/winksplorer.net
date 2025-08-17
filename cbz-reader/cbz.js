@@ -45,6 +45,9 @@ cbz.start = async () => {
     cbz.entries = await reader.getEntries();
     cbz.entries.sort((a, b) => a.filename.localeCompare(b.filename));
 
+    // enable next page btn
+    if (cbz.entries.length) document.getElementById('cbz-next-btn').disabled = false;
+
     // set page count, and display first entry
     document.getElementById('cbz-progress').max = document.getElementById('cbz-page-count').textContent = cbz.entries.length-1;
     cbz.showPage();
