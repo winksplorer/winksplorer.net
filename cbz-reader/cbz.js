@@ -1,18 +1,18 @@
 window.cbz = window.cbz || {}
 
 cbz.entries = null;
-cbz.currentPage = 0;
+cbz.currentPage = 1;
 
 // misc functions
 cbz.showPage = async () => {
     // get data and element
-    const blob = await cbz.entries[cbz.currentPage].getData(new zip.BlobWriter());
+    const blob = await cbz.entries[cbz.currentPage-1].getData(new zip.BlobWriter());
     const imgEl = document.getElementById('cbz-image');
 
     // set image to entry
     imgEl.src = URL.createObjectURL(blob);
-    imgEl.alt = cbz.entries[cbz.currentPage].filename;
-    imgEl.title = cbz.entries[cbz.currentPage].filename;
+    imgEl.alt = cbz.entries[cbz.currentPage-1].filename;
+    imgEl.title = cbz.entries[cbz.currentPage-1].filename;
 
     // update progress
     document.getElementById('cbz-progress').value = document.getElementById('cbz-current-page').textContent = cbz.currentPage;
@@ -21,7 +21,7 @@ cbz.showPage = async () => {
 // button functions
 cbz.previousPage = () => {
     cbz.currentPage--;
-    if (!cbz.currentPage) document.getElementById('cbz-prev-btn').disabled = true;
+    if (cbz.currentPage <= 1) document.getElementById('cbz-prev-btn').disabled = true;
     if (cbz.currentPage < cbz.entries.length) document.getElementById('cbz-next-btn').disabled = false;
 
     cbz.showPage()
@@ -29,8 +29,8 @@ cbz.previousPage = () => {
 
 cbz.nextPage = () => {
     cbz.currentPage++;
-    if (cbz.currentPage >= cbz.entries.length-1) document.getElementById('cbz-next-btn').disabled = true;
-    if (cbz.currentPage) document.getElementById('cbz-prev-btn').disabled = false;
+    if (cbz.currentPage >= cbz.entries.length) document.getElementById('cbz-next-btn').disabled = true;
+    if (cbz.currentPage > 1) document.getElementById('cbz-prev-btn').disabled = false;
 
     cbz.showPage()
 };
@@ -49,6 +49,6 @@ cbz.start = async () => {
     if (cbz.entries.length) document.getElementById('cbz-next-btn').disabled = false;
 
     // set page count, and display first entry
-    document.getElementById('cbz-progress').max = document.getElementById('cbz-page-count').textContent = cbz.entries.length-1;
+    document.getElementById('cbz-progress').max = document.getElementById('cbz-page-count').textContent = cbz.entries.length;
     cbz.showPage();
 };
