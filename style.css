@@ -93,8 +93,8 @@ input[type="file"]::file-selector-button {
 }
 
 progress {
-    height: 14px;
-    margin-bottom: -0.2em;
+    height: 12px;
+    margin-bottom: -0.25em;
     width: 100%;
 }
 
@@ -196,7 +196,7 @@ footer.short {
 }
 
 @media (max-width: 755px) {
-    .inline { display: inline-block; width: 100%; }
+    .inline:not(.no-response) { display: inline-block; width: 100%; }
 }
 
 .inline + .inline {
@@ -219,5 +219,5 @@ footer.short {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 1;
+    flex: 1 1 auto;
 }

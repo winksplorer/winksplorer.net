@@ -21,8 +21,8 @@
                 <p class="no-bottom-margin">Select your CBZ file.</p>
                 <input class="lots-of-padding" type="file" id="cbz-file-dialog" accept="application/vnd.comicbook+zip" onchange="cbz.start()"/>
 
-                <div class="inline">
-                    <button id="cbz-prev-btn" onclick="cbz.previousPage()" disabled>previous page</button>
+                <div class="inline no-response">
+                    <button id="cbz-prev-btn" onclick="cbz.previousPage()" disabled>prev page</button>
                     <div class="cbzprogress">
                         <progress id="cbz-progress" value="0" max="0"></progress>
                         <p style="margin: 0em;">page <span id="cbz-current-page">0</span> / <span id="cbz-page-count">0</span></p>
@@ -34,7 +34,7 @@
 
         <section>
             <div class="content">
-                <img id="cbz-image" width="650"></img>
+                <img id="cbz-image" class="content"></img>
             </div>
         </section>
 
