@@ -221,3 +221,7 @@ footer.short {
     align-items: center;
     flex: 1 1 auto;
 }
+
+.lower-line-height {
+    line-height: 1.2;
+}
