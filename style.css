@@ -27,6 +27,13 @@ h1, h2, h3 {
 h1 {
     font-size: 3em;
     letter-spacing: clamp(0px, 1vw, 13px);
+    transition: font-size 0.2s ease-in-out;
+}
+
+@media (max-width: 770px) {
+    h1 {
+        font-size: 2.5em;
+    }
 }
 
 h2 {
@@ -42,6 +49,7 @@ h3 {
 img {
     float: left;
     margin-right: 1em;
+    width: clamp(50px, 25vw, 200px);
 }
 
 a {
