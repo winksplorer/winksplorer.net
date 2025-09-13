@@ -15,7 +15,6 @@ html, body {
     background: black;
     color: white;
     margin: 0;
-    padding: 0;
     font-family: 'Tomorrow', 'Helvetica Neue', 'Roboto', 'Ubuntu', 'Segoe UI', sans-serif;
 }
 
@@ -27,7 +26,6 @@ h1, h2, h3 {
 h1 {
     font-size: clamp(1.5em, 10vw, 3em);
     letter-spacing: clamp(0px, 1vw, 13px);
-    transition: font-size 0.2s ease-in-out;
 }
 
 h2 {
@@ -91,4 +89,4 @@ footer { margin-top: 8em !important; /* Fuck you CSS */ }
 }
 
 /* Weird hacks */
-.less-letter-spacing { letter-spacing: clamp(0px, 0.1vw, 1px); /* Nobody'll notice, right? */ }
+.less-letter-spacing { letter-spacing: 1px /* Nobody'll notice, right? */ }
