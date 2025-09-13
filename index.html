@@ -4,103 +4,86 @@
         <title>winksplorer</title>
         <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="description" content="winksplorer">
+	    <meta name="description" content="I design and develop things that I personally use.">
 
         <link href="style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <section class="colored">
-            <div class="content">
+        <section class="hero">
+            <div class="c">
                 <h1>winksplorer</h1>
-                <p>I’m a hobbyist developer, tech tinkerer, graphic designer, and that guy who uses gmake for literally everything.</p>
-
-                <p>I don't follow most modern conventions, which is probably why you're here. I only write software that I personally use. There are exceptions, like the occasional Casio add-in, but I don't spend months writing something "for learning purposes," only to rewrite it.</p>
-
-                <p><s>Roast</s> Contact me at <a href="mailto:wink@winksplorer.net">wink@winksplorer.net</a>.</p>
+                <p>I design and develop things that I personally use.<br>Contact me at <a href="mailto:wink@winksplorer.net">wink@winksplorer.net</a>.</p>
             </div>
         </section>
 
-        <section>
-            <div class="content">
-                <h2>On this site</h2>
-                <p>These are small web toys and projects that run in your browser.</p>
-                <ul>
-                    <li><a href="pmc4/index.html">pmc4</a>: An in-browser demo of <a href="https://github.com/winksplorer/markovtext">markovtext</a> with a few basic "models"</li>
-                    <li><a href="bitcount-wallpaper/index.html">bitcount-wallpaper</a>: A wallpaper generator based on binary counting patterns</li>
-                    <li><a href="cbz-reader/index.html">cbz-reader</a>: A CBZ comic reader that runs completely in the browser</li>
-                </ul>
-            </div>
+        <section class="main">
+            <section class="c">
+                <h2>about me</h2>
+                <div>
+                    <img class="circle" src="assets/turbine.webp" alt="My profile picture, a DELL PowerEdge R630">
+                    <p>
+                        I'm wink, also known as winksplorer. I work in software development and graphic design, and lately I’ve been getting into photography.
+                        <br><br>Lightning round: I use Debian Sid, my favorite movie is Memento, and my favorite languages are Go and C.
+                    </p>
+                </div>
+            </section>
+
+            <section class="c">
+                <h2>works</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>summit (2025)</h3>
+                        <small>Go, JS, C</small>
+                        <p>Self-contained Linux/BSD server management web UI in 3MB</p>
+                        <a href="https://github.com/winksplorer/summit">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3>xappkeys (2025)</h3>
+                        <small>C</small>
+                        <p>App-specific macro tool for X11 Linux with device interception</p>
+                        <a href="https://github.com/winksplorer/xappkeys">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3 class="less-letter-spacing">minimaterials (2025)</h3>
+                        <small>CSS, JS</small>
+                        <p>Tiny Material Design implementation for the web</p>
+                        <a href="https://github.com/winksplorer/minimaterials">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3>fxbf (2025)</h3>
+                        <small>C</small>
+                        <p>Brainfuck interpreter for CASIO fx-9750GIII (or similar) calculators</p>
+                        <a href="https://github.com/winksplorer/fxbf">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3>yadeb (2025)</h3>
+                        <small>Go</small>
+                        <p>Manages .deb packages directly from GitHub releases</p>
+                        <a href="https://github.com/winksplorer/yadeb">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3>malino (2024)</h3>
+                        <small>Go, C#, C</small>
+                        <p>Toolkit to build small applications on top of the Linux kernel</p>
+                        <a href="https://github.com/malinoOS/malino">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3>snbox (2024)</h3>
+                        <small>C</small>
+                        <p>QEMU launcher that avoids the need to install operating systems</p>
+                        <a href="https://github.com/winksplorer/snbox">SEE REPO</a>
+                    </div>
+                    <div class="card">
+                        <h3>csmarkdoc (2024)</h3>
+                        <small>Go</small>
+                        <p>Generate Markdown docs for C# code without compilation</p>
+                        <a href="https://github.com/winksplorer/csmarkdoc">SEE REPO</a>
+                    </div>
+                </div>
+            </section>
         </section>
 
-        <section>
-            <div class="content">
-                <h2>Projects</h2>
-                <p>These are links to my GitHub repositories, sorted from most to least useful (in my opinion).</p>
-                <ul>
-                    <li><a href="https://github.com/winksplorer/summit">summit</a>: Self-contained Linux/BSD server management web UI that fits in 3MB</li>
-                    <li><a href="https://github.com/winksplorer/yadeb">yadeb</a>: Utility for managing .deb packages directly from GitHub releases</li>
-                    <li><a href="https://github.com/winksplorer/xappkeys">xappkeys</a>: App-specific macro tool for X11 Linux with device interception</li>
-                    <li><a href="https://github.com/winksplorer/csmarkdoc">csmarkdoc</a>: Tool for generating Markdown documentation for C# code</li>
-                    <li><a href="https://github.com/winksplorer/feh-apod">feh-apod</a>: Feh wrapper that sets your wallpaper to NASA's picture of the day</li>
-                    <li><a href="https://github.com/winksplorer/minimaterials">minimaterials</a>: Tiny Material Design implementation for lightweight web apps</li>
-                    <li><a href="https://github.com/winksplorer/kpw7-stats-display">kpw7-stats-display</a>: Displays Linux system stats on a Kindle Paperwhite</li>
-                    <li><a href="https://github.com/winksplorer/snbox">snbox</a>: A "Windows Sandbox"-like QEMU frontend</li>
-                    <li><a href="https://github.com/winksplorer/markovtext">markovtext</a>: A Markov chain text generator</li>
-                    <li><a href="https://github.com/winksplorer/fxbf">fxbf</a>: A Brainfuck interpreter for CASIO fx-9750GIII (or similar) calculators</li>
-                    <li><a href="https://github.com/winksplorer/winksplorer.net">winksplorer.net</a>: This website, written in vanilla HTML/CSS/JS as God intended</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div class="content">
-                <h2>Skills</h2>
-                <p>A.K.A. the part where I list basic knowledge with a massive ego.</p>
-                <ul class="lower-line-height">
-                    <li>
-                        Languages
-                        <ul>
-                            <li>Go</li>
-                            <li>C (the question remains as to whether I'm good at it)</li>
-                            <li>x86 Assembly (same here)</li>
-                            <li>C#</li>
-                            <li>Shell Scripting</li>
-                            <li>HTML / CSS / Vanilla JS</li>
-                            <li>Python
-                                <ul>
-                                    <li>Discord.py</li>
-                                    <li>Ollama-python</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        Design
-                        <ul>
-                            <li>Pixelmator Pro</li>
-                            <li>Photoshop CS6</li>
-                            <li>Figma (Yes, I hate it too)</li>
-                        </ul>
-                    </li>
-                    <li>System administration
-                        <ul>
-                            <li>Linux</li>
-                            <li>dpkg / apt</li>
-                            <li>Proxmox</li>
-                            <li>iDRAC</li>
-                            <li>QEMU/KVM</li>
-                        </ul>
-                    </li>
-                    <li>Random crap
-                        <ul>
-                            <li>CASIO Add-in development</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <footer>&copy; 2025 winksplorer et al. All <a href="https://github.com/winksplorer/winksplorer.net">code and content</a> is licensed under the Apache License 2.0 unless stated otherwise.
-            <br><br>All fonts used on this site (except the header font) are under the <a href="https://scripts.sil.org/OFL">SIL Open Font License</a>, and the header font is the <a href="https://fontstruct.com/fontstructions/show/584688">"TI Calculator Font"</a> by SimonOrJ, licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0">CC BY-NC-SA 3.0</a>. No modifications were made.</footer>
+        <footer class="c">&copy; 2025 winksplorer. All <a href="https://github.com/winksplorer/winksplorer.net">code and content</a> is licensed under the Apache License 2.0 unless stated otherwise.
+            All fonts used on this site are under the <a href="https://scripts.sil.org/OFL">SIL Open Font License</a>. No modifications were made.</footer>
     </body>
 </html>
