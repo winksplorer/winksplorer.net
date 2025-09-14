@@ -30,7 +30,7 @@ h1 {
 
 h2 {
     font-size: clamp(1.5em, 8vw, 2.5em);
-    letter-spacing: clamp(0px, 0.5vw, 6px)
+    letter-spacing: clamp(0px, 0.5vw, 6px);
 }
 
 h3 {
@@ -89,4 +89,4 @@ footer { margin-top: 8em !important; /* Fuck you CSS */ }
 }
 
 /* Weird hacks */
-.less-letter-spacing { letter-spacing: 1px /* Nobody'll notice, right? */ }
+.less-letter-spacing { letter-spacing: 1px; /* Nobody'll notice, right? */ }
