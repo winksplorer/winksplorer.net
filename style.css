@@ -16,6 +16,8 @@ html, body {
     color: white;
     margin: 0;
     font-family: 'Tomorrow', 'Helvetica Neue', 'Roboto', 'Ubuntu', 'Segoe UI', sans-serif;
+
+    scrollbar-color: white black;
 }
 
 h1, h2, h3 {
