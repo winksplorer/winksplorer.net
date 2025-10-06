@@ -16,7 +16,6 @@ html, body {
     color: white;
     margin: 0;
     font-family: 'Tomorrow', 'Helvetica Neue', 'Roboto', 'Ubuntu', 'Segoe UI', sans-serif;
-
     scrollbar-color: white black;
 }
 
@@ -72,10 +71,10 @@ footer { margin-top: 8em !important; /* Fuck you CSS */ }
     margin: 40px auto;
     line-height: 1.6;
     font-size: 18px;
-    padding: 0 60px;
+    padding: 0 40px;
 }
 
-.c + .c { margin-top: 4em !important; }
+.c + .c { margin-top: 4em; }
 
 .card > h3 {
     margin-top: 0;
@@ -89,6 +88,3 @@ footer { margin-top: 8em !important; /* Fuck you CSS */ }
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
 }
-
-/* Weird hacks */
-.less-letter-spacing { letter-spacing: 1px; /* Nobody'll notice, right? */ }
